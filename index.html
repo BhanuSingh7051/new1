@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feed | LinkedIn Clone</title>
+    <link href="styles/main.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-content">
+            <a href="index.html" class="logo">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <div class="nav-links">
+                <a href="index.html" class="nav-item active">
+                    <i class="fas fa-home nav-icon"></i>
+                    <span>Home</span>
+                </a>
+                <a href="profile.html" class="nav-item">
+                    <i class="fas fa-user-circle nav-icon"></i>
+                    <span>Profile</span>
+                </a>
+                <a href="jobs.html" class="nav-item">
+                    <i class="fas fa-briefcase nav-icon"></i>
+                    <span>Jobs</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <!-- Left Sidebar -->
+        <div class="sidebar-left">
+            <div class="card">
+                <div class="profile-card-header">
+                    <div class="cover-photo"></div>
+                    <div class="profile-avatar">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="user-name">Welcome User</div>
+                    <div class="user-headline">Build your resume today</div>
+                </div>
+                <div class="card-padding" style="border-top: 1px solid var(--border-color);">
+                    <div
+                        style="font-size: 12px; font-weight: 600; color: var(--text-secondary); display: flex; justify-content: space-between;">
+                        <span>Profile Views</span>
+                        <span style="color: var(--primary-color);">0</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Main Feed -->
+        <div class="main-content">
+            <div class="card">
+                <div class="card-padding">
+                    <div style="display: flex; gap: 10px; margin-bottom: 10px;">
+                        <div class="profile-avatar"
+                            style="width: 48px; height: 48px; border: none; margin: 0; font-size: 20px;">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <button
+                            style="flex: 1; text-align: left; background-color: white; border: 1px solid var(--text-secondary); color: var(--text-secondary); border-radius: 35px; padding-left: 20px;">
+                            Start a post...
+                        </button>
+                    </div>
+                    <div style="display: flex; justify-content: space-between; padding: 0 20px;">
+                        <div class="feed-option" style="color: #70b5f9;">
+                            <i class="fas fa-image"></i> <span>Photo</span>
+                        </div>
+                        <div class="feed-option" style="color: #7fc15e;">
+                            <i class="fas fa-video"></i> <span>Video</span>
+                        </div>
+                        <div class="feed-option" style="color: #e7a33e;">
+                            <i class="fas fa-calendar-alt"></i> <span>Event</span>
+                        </div>
+                        <div class="feed-option" style="color: #f5987e;">
+                            <i class="fas fa-newspaper"></i> <span>Article</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-padding">
+                    <div
+                        style="margin-bottom: 15px; display: flex; justify-content: space-between; align-items: center;">
+                        <span style="font-size: 12px; color: var(--text-secondary);">Suggested for you</span>
+                        <i class="fas fa-ellipsis-h" style="color: var(--text-secondary);"></i>
+                    </div>
+                    <h3>Welcome to JobScan</h3>
+                    <p style="margin-top: 10px; font-size: 14px; color: var(--text-primary);">
+                        This application helps you build a professional resume and analyze job descriptions to find the
+                        best match for your skills.
+                    </p>
+                    <div style="margin-top: 20px; display: flex; gap: 10px;">
+                        <a href="profile.html" style="text-decoration: none;">
+                            <button>Update Profile</button>
+                        </a>
+                        <a href="jobs.html" style="text-decoration: none;">
+                            <button
+                                style="background-color: white; color: var(--text-secondary); border: 1px solid var(--text-secondary);">Find
+                                Jobs</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Right Sidebar -->
+        <div class="sidebar-right">
+            <div class="card">
+                <div class="card-padding">
+                    <h3>LinkedIn News</h3>
+                    <ul style="list-style: none; padding: 0; margin-top: 15px;">
+                        <li style="margin-bottom: 10px;">
+                            <div style="font-size: 14px; font-weight: 600;">Top skills in 2025</div>
+                            <div style="font-size: 12px; color: var(--text-secondary);">1d ago • 10,934 readers</div>
+                        </li>
+                        <li style="margin-bottom: 10px;">
+                            <div style="font-size: 14px; font-weight: 600;">Hiring trends update</div>
+                            <div style="font-size: 12px; color: var(--text-secondary);">3h ago • 5,211 readers</div>
+                        </li>
+                        <li style="margin-bottom: 10px;">
+                            <div style="font-size: 14px; font-weight: 600;">Remote work policies</div>
+                            <div style="font-size: 12px; color: var(--text-secondary);">12h ago • 8,442 readers</div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

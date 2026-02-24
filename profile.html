@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile | LinkedIn Clone</title>
+    <link href="styles/main.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-content">
+            <a href="index.html" class="logo">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <div class="nav-links">
+                <a href="index.html" class="nav-item">
+                    <i class="fas fa-home nav-icon"></i>
+                    <span>Home</span>
+                </a>
+                <a href="profile.html" class="nav-item active">
+                    <i class="fas fa-user-circle nav-icon"></i>
+                    <span>Profile</span>
+                </a>
+                <a href="jobs.html" class="nav-item">
+                    <i class="fas fa-briefcase nav-icon"></i>
+                    <span>Jobs</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container" style="grid-template-columns: 1fr 1fr;"> <!-- 2 equal columns for builder -->
+
+        <!-- Editor Column -->
+        <div class="main-content">
+            <div class="card">
+                <div class="card-padding">
+                    <h2>Edit Profile</h2>
+                    <form id="resume-form" onsubmit="event.preventDefault(); buildResume();">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" placeholder="Ex: John Doe">
+                        </div>
+                        <div class="form-group">
+                            <label for="headline">Headline</label>
+                            <input type="text" id="headline" placeholder="Ex: Software Engineer at Google">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" placeholder="john@example.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone</label>
+                            <input type="tel" id="phone" placeholder="(555) 123-4567">
+                        </div>
+                        <div class="form-group">
+                            <label for="summary">About</label>
+                            <textarea id="summary" rows="4"
+                                placeholder="Brief summary of your professional background"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="skills">Skills (comma separated)</label>
+                            <input type="text" id="skills" placeholder="Java, Python, Leadership">
+                        </div>
+                        <div class="form-group">
+                            <label for="experience">Experience</label>
+                            <textarea id="experience" rows="6" placeholder="Describe your work history..."></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="education">Education</label>
+                            <textarea id="education" rows="4" placeholder="Describe your education..."></textarea>
+                        </div>
+                        <button type="submit">Save Profile</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Preview Column -->
+        <div class="sidebar-right" style="width: auto;"> <!-- Full width of grid column -->
+            <div class="card">
+                <div class="profile-card-header">
+                    <div class="cover-photo"></div>
+                    <div class="profile-avatar">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div style="padding: 0 16px; text-align: left;">
+                        <h2 style="text-align: center; margin-bottom: 5px;">Your Profile Preview</h2>
+                        <p style="text-align: center; color: var(--text-secondary); margin-bottom: 10px;">This is how
+                            you appear to recruiters</p>
+                    </div>
+                </div>
+                <div id="resume-preview-content" class="resume-preview">
+                    <!-- Dynamic Content Loaded Here -->
+                    <p style="text-align: center; color: var(--text-secondary);">Fill out the form to see your profile
+                        here.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jobs | LinkedIn Clone</title>
+    <link href="styles/main.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-content">
+            <a href="index.html" class="logo">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <div class="nav-links">
+                <a href="index.html" class="nav-item">
+                    <i class="fas fa-home nav-icon"></i>
+                    <span>Home</span>
+                </a>
+                <a href="profile.html" class="nav-item">
+                    <i class="fas fa-user-circle nav-icon"></i>
+                    <span>Profile</span>
+                </a>
+                <a href="jobs.html" class="nav-item active">
+                    <i class="fas fa-briefcase nav-icon"></i>
+                    <span>Jobs</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container" style="grid-template-columns: 1fr 350px;">
+
+        <!-- Main Job Analysis Area -->
+        <div class="main-content">
+            <div class="card">
+                <div class="card-padding">
+                    <h2>Job Match Analyzer</h2>
+                    <p style="color: var(--text-secondary); margin-bottom: 20px;">
+                        Paste a job description below to see how well your current profile matches the requirements.
+                    </p>
+
+                    <div class="form-group">
+                        <label for="job-description">Job Description</label>
+                        <textarea id="job-description" rows="10"
+                            placeholder="Paste full job description here..."></textarea>
+                    </div>
+
+                    <button onclick="analyzeJob()">Analyze Match</button>
+
+                    <div id="analysis-result">
+                        <!-- Results appear here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sidebar Tips -->
+        <div class="sidebar-right">
+            <div class="card">
+                <div class="card-padding">
+                    <h3>Job Search Tips</h3>
+                    <ul
+                        style="padding-left: 20px; margin-top: 10px; color: var(--text-primary); font-size: 14px; line-height: 1.6;">
+                        <li>Tailor your resume skills to match the job description keywords.</li>
+                        <li>Ensure your experience section highlights relevant achievements.</li>
+                        <li>Use actionable verbs (e.g., "Led", "Developed", "Optimized").</li>
+                        <li>Keep your summary concise and focused on your value proposition.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts/main.js"></script>
+</body>
+
+</html>
